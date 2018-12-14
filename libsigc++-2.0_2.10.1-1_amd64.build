@@ -1,0 +1,1205 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package libsigc++-2.0
+dpkg-buildpackage: info: source version 2.10.1-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Jeremy Bicha <jbicha@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with gnome
+   dh_auto_clean
+	make -j8 distclean
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+Making distclean in sigc++
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+test -z "libsigc-2.0.la" || rm -f libsigc-2.0.la
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f adaptors/lambda/*.o
+rm -rf adaptors/lambda/.libs adaptors/lambda/_libs
+rm -f adaptors/lambda/.deps/.dirstamp
+rm -f adaptors/lambda/*.lo
+rm -rf functors/.libs functors/_libs
+rm -f ./so_locations
+rm -f adaptors/lambda/.dirstamp
+rm -f functors/*.o
+rm -f functors/.deps/.dirstamp
+rm -f functors/*.lo
+rm -f functors/.dirstamp
+rm -f ./.deps/connection.Plo
+rm -f ./.deps/lambda.Plo
+rm -f ./.deps/signal_base.Plo
+rm -f ./.deps/trackable.Plo
+rm -f adaptors/lambda/.deps/lambda.Plo
+rm -f functors/.deps/slot_base.Plo
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+Making distclean in tests
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+rm -rf .libs _libs
+rm -f *.o
+test -z "test_accum_iter.log test_accumulated.log test_bind.log test_bind_as_slot.log test_bind_ref.log test_bind_refptr.log test_bind_return.log test_compose.log test_copy_invalid_slot.log test_cpp11_lambda.log test_custom.log test_deduce_result_type.log test_disconnect.log test_disconnect_during_emit.log test_exception_catch.log test_functor_trait.log test_hide.log test_limit_reference.log test_mem_fun.log test_ptr_fun.log test_retype.log test_retype_return.log test_signal.log test_signal_move.log test_size.log test_slot.log test_slot_disconnect.log test_slot_move.log test_trackable.log test_trackable_move.log test_track_obj.log test_visit_each.log" || rm -f test_accum_iter.log test_accumulated.log test_bind.log test_bind_as_slot.log test_bind_ref.log test_bind_refptr.log test_bind_return.log test_compose.log test_copy_invalid_slot.log test_cpp11_lambda.log test_custom.log test_deduce_result_type.log test_disconnect.log test_disconnect_during_emit.log test_exception_catch.log test_functor_trait.log test_hide.log test_limit_reference.log test_mem_fun.log test_ptr_fun.log test_retype.log test_retype_return.log test_signal.log test_signal_move.log test_size.log test_slot.log test_slot_disconnect.log test_slot_move.log test_trackable.log test_trackable_move.log test_track_obj.log test_visit_each.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ rm -f test_accum_iter test_accumulated test_bind test_bind_as_slot test_bind_ref test_bind_refptr test_bind_return test_compose test_copy_invalid_slot test_cpp11_lambda test_custom test_deduce_result_type test_disconnect test_disconnect_during_emit test_exception_catch test_functor_trait test_hide test_limit_reference test_mem_fun test_ptr_fun test_retype test_retype_return test_signal test_signal_move test_size test_slot test_slot_disconnect test_slot_move test_trackable test_trackable_move test_track_obj test_visit_each
+test . = "." || test -z "" || rm -f 
+test -z "test_accum_iter.trs test_accumulated.trs test_bind.trs test_bind_as_slot.trs test_bind_ref.trs test_bind_refptr.trs test_bind_return.trs test_compose.trs test_copy_invalid_slot.trs test_cpp11_lambda.trs test_custom.trs test_deduce_result_type.trs test_disconnect.trs test_disconnect_during_emit.trs test_exception_catch.trs test_functor_trait.trs test_hide.trs test_limit_reference.trs test_mem_fun.trs test_ptr_fun.trs test_retype.trs test_retype_return.trs test_signal.trs test_signal_move.trs test_size.trs test_slot.trs test_slot_disconnect.trs test_slot_move.trs test_trackable.trs test_trackable_move.trs test_track_obj.trs test_visit_each.trs" || rm -f test_accum_iter.trs test_accumulated.trs test_bind.trs test_bind_as_slot.trs test_bind_ref.trs test_bind_refptr.trs test_bind_return.trs test_compose.trs test_copy_invalid_slot.trs test_cpp11_lambda.trs test_custom.trs test_deduce_result_type.trs test_disconnect.trs test_disconnect_during_emit.trs test_exception_catch.trs test_functor_trait.trs test_hide.trs test_limit_reference.trs test_mem_fun.trs test_ptr_fun.trs test_retype.trs test_retype_return.trs test_signal.trs test_signal_move.trs test_size.trs test_slot.trs test_slot_disconnect.trs test_slot_move.trs test_trackable.trs test_trackable_move.trs test_track_obj.trs test_visit_each.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f ./.deps/benchmark.Po
+rm -f ./.deps/test_accum_iter.Po
+rm -f ./.deps/test_accumulated.Po
+rm -f ./.deps/test_bind.Po
+rm -f ./.deps/test_bind_as_slot.Po
+rm -f ./.deps/test_bind_ref.Po
+rm -f ./.deps/test_bind_refptr.Po
+rm -f ./.deps/test_bind_return.Po
+rm -f ./.deps/test_compose.Po
+rm -f ./.deps/test_copy_invalid_slot.Po
+rm -f ./.deps/test_cpp11_lambda.Po
+rm -f ./.deps/test_custom.Po
+rm -f ./.deps/test_deduce_result_type.Po
+rm -f ./.deps/test_disconnect.Po
+rm -f ./.deps/test_disconnect_during_emit.Po
+rm -f ./.deps/test_exception_catch.Po
+rm -f ./.deps/test_functor_trait.Po
+rm -f ./.deps/test_hide.Po
+rm -f ./.deps/test_limit_reference.Po
+rm -f ./.deps/test_mem_fun.Po
+rm -f ./.deps/test_ptr_fun.Po
+rm -f ./.deps/test_retype.Po
+rm -f ./.deps/test_retype_return.Po
+rm -f ./.deps/test_signal.Po
+rm -f ./.deps/test_signal_move.Po
+rm -f ./.deps/test_size.Po
+rm -f ./.deps/test_slot.Po
+rm -f ./.deps/test_slot_disconnect.Po
+rm -f ./.deps/test_slot_move.Po
+rm -f ./.deps/test_track_obj.Po
+rm -f ./.deps/test_trackable.Po
+rm -f ./.deps/test_trackable_move.Po
+rm -f ./.deps/test_visit_each.Po
+rm -f ./.deps/testutilities.Po
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+Making distclean in examples
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ rm -f hello_world member_method
+test . = "." || test -z "" || rm -f 
+rm -f ./.deps/hello_world.Po
+rm -f ./.deps/member_method.Po
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+Making distclean in docs
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+test -z "reference/doxygen.log manual/libsigc_manual.dvi manual/libsigc_manual.pdf manual/libsigc_manual.ps" || rm -f reference/doxygen.log manual/libsigc_manual.dvi manual/libsigc_manual.pdf manual/libsigc_manual.ps
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "sigc++-2.0.pc sigc++-2.0-uninstalled.pc docs/reference/Doxyfile MSVC_NMake/sigc.rc" || rm -f sigc++-2.0.pc sigc++-2.0-uninstalled.pc docs/reference/Doxyfile MSVC_NMake/sigc.rc
+rm -f config.h stamp-h1 sigc++config.h stamp-h2
+rm -f libtool config.lt
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+test . = "." || test -z "" || rm -f 
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+test -z "MSVC_NMake/sigc++config.h" || rm -f MSVC_NMake/sigc++config.h
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_autoreconf_clean
+   dh_gnome_clean
+   dh_clean
+FAKEROOTKEY=1537713703 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+make: 'build' is up to date.
+ fakeroot debian/rules binary
+dh binary --with gnome
+   dh_update_autotools_config
+   dh_autoreconf
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build'.
+libtoolize: copying file 'build/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'build'.
+libtoolize: copying file 'build/libtool.m4'
+libtoolize: copying file 'build/ltoptions.m4'
+libtoolize: copying file 'build/ltsugar.m4'
+libtoolize: copying file 'build/ltversion.m4'
+libtoolize: copying file 'build/lt~obsolete.m4'
+configure.ac:43: installing 'build/compile'
+configure.ac:28: installing 'build/missing'
+examples/Makefile.am: installing 'build/depcomp'
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+dh_auto_configure -- \
+	--enable-documentation \
+	--enable-maintainer-mode \
+	--enable-shared \
+	--enable-static
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking --enable-documentation --enable-maintainer-mode --enable-shared --enable-static
+configure: loading site script /usr/share/config.site
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... (cached) gnutar
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports GNU make features... yes
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether icpc accepts -g... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of icpc... (cached) gcc3
+checking whether icpc supports C++11 features by default... yes
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... (cached) /bin/grep -E
+checking for fgrep... (cached) /bin/grep -F
+checking for ld used by icc... (cached) xild -m elf_x86_64
+checking if the linker (xild -m elf_x86_64) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) /usr/bin/x86_64-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-linux-gnu-nm -B) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for xild -m elf_x86_64 option to reload object files... (cached) -r
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... (cached) dlltool
+checking how to associate runtime and link libraries... (cached) printf %s\n
+checking for archiver @FILE support... (cached) @
+checking for strip... (cached) x86_64-linux-gnu-strip
+checking for ranlib... (cached) /usr/bin/x86_64-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-linux-gnu-nm -B output from icc object... ok
+checking for sysroot... no
+checking for a working dd... (cached) /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... (cached) mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... icc -E
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if icc supports -fno-rtti -fno-exceptions... (cached) yes
+checking for icc option to produce PIC... (cached) -fpic
+checking if icc PIC flag -fpic works... (cached) yes
+checking if icc static flag -static works... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking whether the icc linker (xild -m elf_x86_64 -m elf_x86_64) supports shared libraries... xild: warning #10013: no objects specified for multi-file optimization
+xild: executing 'ld'
+yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... icpc -E
+checking for ld used by icpc... (cached) xild -m elf_x86_64
+checking if the linker (xild -m elf_x86_64) is GNU ld... (cached) yes
+checking whether the icpc linker (xild -m elf_x86_64) supports shared libraries... yes
+checking for icpc option to produce PIC... (cached) -fpic
+checking if icpc PIC flag -fpic works... (cached) yes
+checking if icpc static flag -static works... (cached) yes
+checking if icpc supports -c -o file.o... (cached) yes
+checking if icpc supports -c -o file.o... (cached) yes
+checking whether the icpc linker (xild -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for gm4... no
+checking for m4... m4
+checking for perl... (cached) /usr/bin/perl
+checking for dot... (cached) /usr/bin/dot
+checking for doxygen... (cached) /usr/bin/doxygen
+checking for xsltproc... (cached) /usr/bin/xsltproc
+checking pkg-config is at least version 0.9.0... yes
+checking for libstdc documentation... /usr/share/mm-common/doctags/libstdc++.tag@http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen
+checking if C++ compiler supports the use of a particular specialization when calling operator() template methods.... yes
+checking if C++ compiler supports the use of a particular specialization when calling operator() template methods omitting the template keyword.... yes
+checking if C++ preprocessor supports pragma push_macro() and pop_macro().... yes
+checking for non-standard Sun libCstd reverse_iterator... no
+checking which C++ compiler warning flags to use... none
+configure: Deprecated API will be built, for backwards-compatibility.
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating sigc++-2.0.pc
+config.status: creating sigc++-2.0-uninstalled.pc
+config.status: creating sigc++/Makefile
+config.status: creating examples/Makefile
+config.status: creating tests/Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/reference/Doxyfile
+config.status: creating MSVC_NMake/sigc.rc
+config.status: creating config.h
+config.status: creating sigc++config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing MSVC_NMake/sigc++config.h commands
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_auto_build
+	make -j8
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make  all-recursive
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+Making all in sigc++
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make  all-am
+make[4]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+/bin/bash ../libtool  --tag=CXX   --mode=compile icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o signal_base.lo signal_base.cc
+/bin/bash ../libtool  --tag=CXX   --mode=compile icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o trackable.lo trackable.cc
+/bin/bash ../libtool  --tag=CXX   --mode=compile icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o connection.lo connection.cc
+/bin/bash ../libtool  --tag=CXX   --mode=compile icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o functors/slot_base.lo functors/slot_base.cc
+/bin/bash ../libtool  --tag=CXX   --mode=compile icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o adaptors/lambda/lambda.lo adaptors/lambda/lambda.cc
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c signal_base.cc  -fpic -o .libs/signal_base.o
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c connection.cc  -fpic -o .libs/connection.o
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c trackable.cc  -fpic -o .libs/trackable.o
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c functors/slot_base.cc  -fpic -o functors/.libs/slot_base.o
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c adaptors/lambda/lambda.cc  -fpic -o adaptors/lambda/.libs/lambda.o
+signal_base.cc
+trackable.cc
+connection.cc
+functors/slot_base.cc
+adaptors/lambda/lambda.cc
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c functors/slot_base.cc -o functors/slot_base.o >/dev/null 2>&1
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c trackable.cc -o trackable.o >/dev/null 2>&1
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c connection.cc -o connection.o >/dev/null 2>&1
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c adaptors/lambda/lambda.cc -o adaptors/lambda/lambda.o >/dev/null 2>&1
+libtool: compile:  icpc -DHAVE_CONFIG_H -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c signal_base.cc -o signal_base.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CXX   --mode=link icpc  -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -no-undefined -version-info 0:0:0 -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -Wl,-z,defs -Wl,--as-needed -o libsigc-2.0.la -rpath /usr/lib/x86_64-linux-gnu signal_base.lo trackable.lo connection.lo functors/slot_base.lo adaptors/lambda/lambda.lo  
+libtool: link: icpc -shared  .libs/signal_base.o .libs/trackable.o .libs/connection.o functors/.libs/slot_base.o adaptors/lambda/.libs/lambda.o   -L/opt/intel/tbb/lib/intel64/gcc4.7 -L/opt/intel/compilers_and_libraries_2019.1.144/linux/compiler/lib/intel64_lin -L/usr/lib/gcc/x86_64-linux-gnu/8/ -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/ -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../../lib/ -L/lib/x86_64-linux-gnu/ -L/lib/../lib64 -L/lib/../lib/ -L/usr/lib/x86_64-linux-gnu/ -L/usr/lib/../lib/ -L/opt/intel/tbb/lib/intel64/gcc4.7/ -L/usr/lib/gcc/x86_64-linux-gnu/8/../../../ -L/lib64 -L/lib/ -L/usr/lib  -g -O2 -march=native -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -Wl,-z -Wl,defs -Wl,--as-needed   -Wl,-soname -Wl,libsigc-2.0.so.0 -o .libs/libsigc-2.0.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libsigc-2.0.so.0" && ln -s "libsigc-2.0.so.0.0.0" "libsigc-2.0.so.0")
+libtool: link: (cd ".libs" && rm -f "libsigc-2.0.so" && ln -s "libsigc-2.0.so.0.0.0" "libsigc-2.0.so")
+libtool: link: xiar cru .libs/libsigc-2.0.a  signal_base.o trackable.o connection.o functors/slot_base.o adaptors/lambda/lambda.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: /usr/bin/x86_64-linux-gnu-ranlib .libs/libsigc-2.0.a
+libtool: link: ( cd ".libs" && rm -f "libsigc-2.0.la" && ln -s "../libsigc-2.0.la" "libsigc-2.0.la" )
+make[4]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+Making all in tests
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+Making all in examples
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o hello_world.o hello_world.cc
+icpc -DHAVE_CONFIG_H   -I.. -I.. -Wdate-time -D_FORTIFY_SOURCE=2  -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -c -o member_method.o member_method.cc
+hello_world.cc
+member_method.cc
+/bin/bash ../libtool  --tag=CXX   --mode=link icpc  -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -Wl,-z,defs -Wl,--as-needed -o member_method member_method.o ../sigc++/libsigc-2.0.la 
+/bin/bash ../libtool  --tag=CXX   --mode=link icpc  -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -Wl,-z,defs -Wl,--as-needed -o hello_world hello_world.o ../sigc++/libsigc-2.0.la 
+libtool: link: icpc -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -Wl,-z -Wl,defs -Wl,--as-needed -o .libs/member_method member_method.o  ../sigc++/.libs/libsigc-2.0.so
+libtool: link: icpc -DSIGCXX_DISABLE_DEPRECATED -g -O2 -fdebug-prefix-map=/dev/shm/libsigcplusplus/libsigc++-2.0-dev=. -Wformat -march=native -pipe -fstack-security-check -Wformat-security -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -Wl,-z -Wl,defs -Wl,--as-needed -o .libs/hello_world hello_world.o  ../sigc++/.libs/libsigc-2.0.so
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+Making all in docs
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+rm -f reference/libsigc++-2.0.tag
+rm -fr reference/html
+(echo '@INCLUDE =' reference/Doxyfile && echo 'INPUT =' ../sigc++/bind.h ../sigc++/bind_return.h ../sigc++/connection.h ../sigc++/reference_wrapper.h ../sigc++/retype_return.h ../sigc++/signal_base.h ../sigc++/slot.h ../sigc++/trackable.h ../sigc++/type_traits.h ../sigc++/visit_each.h ../sigc++/adaptors/adaptors.h ../sigc++/adaptors/bound_argument.h ../sigc++/functors/functors.h ../sigc++/functors/slot_base.h ../sigc++/signal.h ../sigc++/limit_reference.h ../sigc++/functors/functor_trait.h ../sigc++/functors/slot.h ../sigc++/functors/ptr_fun.h ../sigc++/functors/mem_fun.h ../sigc++/adaptors/deduce_result_type.h ../sigc++/adaptors/adaptor_trait.h ../sigc++/adaptors/bind.h ../sigc++/adaptors/bind_return.h ../sigc++/adaptors/retype_return.h ../sigc++/adaptors/hide.h ../sigc++/adaptors/retype.h ../sigc++/adaptors/compose.h ../sigc++/adaptors/exception_catch.h ../sigc++/adaptors/track_obj.h ../sigc++/adaptors/lambda/base.h ../sigc++/adaptors/lambda/select.h ../sigc++/sigc++.h) | "/usr/bin/doxygen" -
+/usr/bin/perl -- "../docs/doc-postprocess.pl" 'reference/html/*.html'
+/usr/bin/xsltproc --stringparam book_title 'libsigc++ Reference Manual' --stringparam book_name 'libsigc++-2.0' --stringparam book_base html -o reference/libsigc++-2.0.devhelp2 "../docs/tagfile-to-devhelp2.xsl" reference/libsigc++-2.0.tag
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j1 install DESTDIR=/dev/shm/libsigcplusplus/libsigc\+\+-2.0-dev/debian/tmp AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+Making install in sigc++
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make  install-am
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make[4]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ../libtool   --mode=install /usr/bin/install   libsigc-2.0.la '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/libsigc-2.0.so.0.0.0 /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.so.0.0.0
+libtool: install: (cd /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libsigc-2.0.so.0.0.0 libsigc-2.0.so.0 || { rm -f libsigc-2.0.so.0 && ln -s libsigc-2.0.so.0.0.0 libsigc-2.0.so.0; }; })
+libtool: install: (cd /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libsigc-2.0.so.0.0.0 libsigc-2.0.so || { rm -f libsigc-2.0.so && ln -s libsigc-2.0.so.0.0.0 libsigc-2.0.so; }; })
+libtool: install: /usr/bin/install .libs/libsigc-2.0.lai /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.la
+libtool: install: /usr/bin/install .libs/libsigc-2.0.a /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.a
+libtool: install: chmod 644 /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.a
+libtool: install: /usr/bin/x86_64-linux-gnu-ranlib /dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/adaptors/lambda'
+ /usr/bin/install -m 644  adaptors/lambda/base.h adaptors/lambda/select.h '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/adaptors/lambda'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/adaptors'
+ /usr/bin/install -m 644  adaptors/adaptors.h adaptors/bound_argument.h adaptors/deduce_result_type.h adaptors/adaptor_trait.h adaptors/bind.h adaptors/bind_return.h adaptors/retype_return.h adaptors/hide.h adaptors/retype.h adaptors/compose.h adaptors/exception_catch.h adaptors/track_obj.h '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/adaptors'
+ /usr/bin/install -m 644  sigc++.h bind.h bind_return.h connection.h reference_wrapper.h retype_return.h signal_base.h slot.h trackable.h type_traits.h visit_each.h signal.h limit_reference.h '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/.'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/functors'
+ /usr/bin/install -m 644  functors/functors.h functors/slot_base.h functors/functor_trait.h functors/slot.h functors/ptr_fun.h functors/mem_fun.h '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/include/sigc++-2.0/sigc++/functors'
+make[4]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/sigc++'
+Making install in tests
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/tests'
+Making install in examples
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/examples'
+Making install in docs
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[3]: Nothing to be done for 'install-exec-am'.
+/bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/reference/html'
+/usr/bin/perl -- "../docs/doc-install.pl" --verbose --mode=0644 -l 'libstdc++.tag@http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/' -t '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/reference/html' --glob -- 'reference/html/*.css' 'reference/html/*.gif' 'reference/html/*.html' 'reference/html/*.js' 'reference/html/*.png'
+doc-install: Using base path http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/ for tag file libstdc++.tag
+doc-install: Copying doxygen-extra.css
+doc-install: Copying doxygen.css
+doc-install: Copying tabs.css
+doc-install: Translating inherits.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor0.html (no references)
+doc-install: Translating structsigc_1_1trackable.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor7.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor6.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor5.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor4.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor3.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor2.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor1.html (no references)
+doc-install: Translating classsigc_1_1slot__base.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4.html (no references)
+doc-install: Translating classsigc_1_1slot7.html (no references)
+doc-install: Translating classsigc_1_1slot6.html (no references)
+doc-install: Translating classsigc_1_1slot5.html (no references)
+doc-install: Translating classsigc_1_1slot4.html (no references)
+doc-install: Translating classsigc_1_1slot3.html (no references)
+doc-install: Translating classsigc_1_1slot2.html (no references)
+doc-install: Translating classsigc_1_1slot1.html (no references)
+doc-install: Translating classsigc_1_1slot0.html (no references)
+doc-install: Translating classsigc_1_1slot.html (no references)
+doc-install: Translating structsigc_1_1signal__base.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__are33def4d0c1a12dcbfd220489302db67.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arcf6cb51783c363bfae7c4a91d9685109.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0d729ce48b1328d982e0ee754652fed04.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01852c349c390cefa04662a850d84c0a94.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_e94644748df11174db4187c0801a1d95.html (rewrote 1 of 1 references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_00_01T__arg7_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_dace8c5b03b250e13cd615dbc3de0ac4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07_08_4.html (no references)
+doc-install: Translating classsigc_1_1signal7.html (no references)
+doc-install: Translating classsigc_1_1signal6.html (no references)
+doc-install: Translating classsigc_1_1signal5.html (no references)
+doc-install: Translating classsigc_1_1signal4.html (no references)
+doc-install: Translating classsigc_1_1signal3.html (no references)
+doc-install: Translating classsigc_1_1signal2.html (no references)
+doc-install: Translating classsigc_1_1signal1.html (no references)
+doc-install: Translating classsigc_1_1signal0.html (no references)
+doc-install: Translating classsigc_1_1signal_1_1accumulated.html (rewrote 1 of 1 references)
+doc-install: Translating classsigc_1_1signal.html (no references)
+doc-install: Translating structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4.html (no references)
+doc-install: Translating structsigc_1_1retype__return__functor.html (no references)
+doc-install: Translating structsigc_1_1retype__functor.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor7.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor6.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor5.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor4.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor3.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor2.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor1.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor0.html (no references)
+doc-install: Translating classsigc_1_1mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1mem__functor0.html (no references)
+doc-install: Translating structsigc_1_1hide__functor_3-1_00_01T__functor_01_4.html (no references)
+doc-install: Translating structsigc_1_1hide__functor_3_010_00_01T__functor_01_4.html (no references)
+doc-install: Translating structsigc_1_1functor__base.html (no references)
+doc-install: Translating structsigc_1_1exception__catch__functor_3_01T__functor_00_01T__catcher_00_01void_01_4.html (no references)
+doc-install: Translating structsigc_1_1exception__catch__functor.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor0.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor0.html (no references)
+doc-install: Translating structsigc_1_1compose2__functor.html (no references)
+doc-install: Translating structsigc_1_1compose1__functor.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor0.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor0.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor0.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor7.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor6.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor5.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor4.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor3.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor2.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor1.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor0.html (no references)
+doc-install: Translating structsigc_1_1bind__return__functor.html (no references)
+doc-install: Translating structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4.html (no references)
+doc-install: Translating structsigc_1_1adapts.html (no references)
+doc-install: Translating structsigc_1_1adaptor__functor.html (no references)
+doc-install: Translating structsigc_1_1adaptor__base.html (no references)
+doc-install: Translating functions_type_v.html (no references)
+doc-install: Translating functions_type_t.html (no references)
+doc-install: Translating functions_type_s.html (no references)
+doc-install: Translating functions_type_r.html (no references)
+doc-install: Translating functions_type_p.html (no references)
+doc-install: Translating functions_type_i.html (no references)
+doc-install: Translating functions_type_g.html (no references)
+doc-install: Translating functions_type_f.html (no references)
+doc-install: Translating functions_type_e.html (no references)
+doc-install: Translating functions_type_d.html (no references)
+doc-install: Translating functions_type_c.html (no references)
+doc-install: Translating functions_type.html (no references)
+doc-install: Translating functions_vars.html (no references)
+doc-install: Translating functions_func_0x7e.html (no references)
+doc-install: Translating functions_func_v.html (no references)
+doc-install: Translating functions_func_u.html (no references)
+doc-install: Translating functions_func_t.html (no references)
+doc-install: Translating functions_func_s.html (no references)
+doc-install: Translating functions_func_r.html (no references)
+doc-install: Translating functions_func_p.html (no references)
+doc-install: Translating functions_func_o.html (no references)
+doc-install: Translating functions_func_n.html (no references)
+doc-install: Translating functions_func_m.html (no references)
+doc-install: Translating functions_func_l.html (no references)
+doc-install: Translating functions_func_i.html (no references)
+doc-install: Translating functions_func_h.html (no references)
+doc-install: Translating functions_func_f.html (no references)
+doc-install: Translating functions_func_e.html (no references)
+doc-install: Translating functions_func_d.html (no references)
+doc-install: Translating functions_func_c.html (no references)
+doc-install: Translating functions_func_b.html (no references)
+doc-install: Translating functions_func.html (no references)
+doc-install: Translating functions_0x7e.html (no references)
+doc-install: Translating functions_v.html (no references)
+doc-install: Translating functions_u.html (no references)
+doc-install: Translating functions_t.html (no references)
+doc-install: Translating functions_s.html (no references)
+doc-install: Translating functions_r.html (no references)
+doc-install: Translating functions_p.html (no references)
+doc-install: Translating functions_o.html (no references)
+doc-install: Translating functions_n.html (no references)
+doc-install: Translating functions_m.html (no references)
+doc-install: Translating functions_l.html (no references)
+doc-install: Translating functions_i.html (no references)
+doc-install: Translating functions_h.html (no references)
+doc-install: Translating functions_g.html (no references)
+doc-install: Translating functions_f.html (no references)
+doc-install: Translating functions_e.html (no references)
+doc-install: Translating functions_d.html (no references)
+doc-install: Translating functions_c.html (no references)
+doc-install: Translating functions_b.html (no references)
+doc-install: Translating functions.html (no references)
+doc-install: Translating hierarchy.html (no references)
+doc-install: Translating classes.html (no references)
+doc-install: Translating annotated.html (no references)
+doc-install: Translating namespacemembers_type.html (no references)
+doc-install: Translating namespacemembers_func_v.html (no references)
+doc-install: Translating namespacemembers_func_u.html (no references)
+doc-install: Translating namespacemembers_func_t.html (no references)
+doc-install: Translating namespacemembers_func_r.html (no references)
+doc-install: Translating namespacemembers_func_p.html (no references)
+doc-install: Translating namespacemembers_func_m.html (no references)
+doc-install: Translating namespacemembers_func_h.html (no references)
+doc-install: Translating namespacemembers_func_e.html (no references)
+doc-install: Translating namespacemembers_func_c.html (no references)
+doc-install: Translating namespacemembers_func.html (no references)
+doc-install: Translating namespacemembers_v.html (no references)
+doc-install: Translating namespacemembers_u.html (no references)
+doc-install: Translating namespacemembers_t.html (no references)
+doc-install: Translating namespacemembers_r.html (no references)
+doc-install: Translating namespacemembers_p.html (no references)
+doc-install: Translating namespacemembers_m.html (no references)
+doc-install: Translating namespacemembers_h.html (no references)
+doc-install: Translating namespacemembers_e.html (no references)
+doc-install: Translating namespacemembers_d.html (no references)
+doc-install: Translating namespacemembers_c.html (no references)
+doc-install: Translating namespacemembers.html (no references)
+doc-install: Translating namespaces.html (no references)
+doc-install: Translating modules.html (no references)
+doc-install: Translating pages.html (no references)
+doc-install: Translating index.html (no references)
+doc-install: Translating dir_5c02128c554eaa40138b2e605fc08970.html (no references)
+doc-install: Translating dir_ea4abdd77c05d5873cecf571a6d96de7.html (no references)
+doc-install: Translating dir_5fbc72877197f8c6013d0f619df5433c.html (no references)
+doc-install: Translating dir_0bd3c8d814eb03171de012519d7a2ccd.html (no references)
+doc-install: Translating graph_legend.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4.html (no references)
+doc-install: Translating classsigc_1_1volatile__limit__reference-members.html (no references)
+doc-install: Translating classsigc_1_1volatile__limit__reference.html (no references)
+doc-install: Translating structsigc_1_1visitor-members.html (no references)
+doc-install: Translating structsigc_1_1visitor.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01std_1_1reference__wrapper_3_01T__type_01_4_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01std_1_1reference__wrapper_3_01T__type_01_4_01_4.html (rewrote 1 of 1 references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01reference__wrapper_3_01T__type_01_4_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01reference__wrapper_3_01T__type_01_4_01_4.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01const__reference__wrapper_3_01T__type_01_4_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference_3_01const__reference__wrapper_3_01T__type_01_4_01_4.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference-members.html (no references)
+doc-install: Translating structsigc_1_1unwrap__reference.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01void_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01void_01_4.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01T__type[N]_4-members.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01T__type[N]_4.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01T__type_01_6_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01T__type_01_6_01_4.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01const_01T__type_01_6_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1type__trait_3_01const_01T__type_01_6_01_4.html (no references)
+doc-install: Translating structsigc_1_1type__trait-members.html (no references)
+doc-install: Translating structsigc_1_1type__trait.html (no references)
+doc-install: Translating structsigc_1_1trackable-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1track__obj__functor1-members.html (no references)
+doc-install: Translating structsigc_1_1slot__list-members.html (no references)
+doc-install: Translating structsigc_1_1slot__list.html (rewrote 4 of 4 references)
+doc-install: Translating structsigc_1_1slot__iterator-members.html (no references)
+doc-install: Translating structsigc_1_1slot__iterator.html (rewrote 3 of 3 references)
+doc-install: Translating structsigc_1_1slot__const__iterator-members.html (no references)
+doc-install: Translating structsigc_1_1slot__const__iterator.html (rewrote 3 of 3 references)
+doc-install: Translating classsigc_1_1slot__base-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg519ed0b830799ecdfb1e59a58e3902913.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1slot7-members.html (no references)
+doc-install: Translating classsigc_1_1slot6-members.html (no references)
+doc-install: Translating classsigc_1_1slot5-members.html (no references)
+doc-install: Translating classsigc_1_1slot4-members.html (no references)
+doc-install: Translating classsigc_1_1slot3-members.html (no references)
+doc-install: Translating classsigc_1_1slot2-members.html (no references)
+doc-install: Translating classsigc_1_1slot1-members.html (no references)
+doc-install: Translating classsigc_1_1slot0-members.html (no references)
+doc-install: Translating classsigc_1_1slot-members.html (no references)
+doc-install: Translating structsigc_1_1signal__base-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar1b790d5e11b1dad6454242a5312e335f.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar01b49059ecd092e1ea927a389afae4ab.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar16a14c152bc5ff346d9997f7152c0448.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar3adb4b941bace89a3f952c380bedda11.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0ad52bc79df5ba2b4d7e5b497ba915039.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01756aafa66a891f219b67f866edb12f89.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_2834c669b9a4f4ae3cbd91fd9ea54658.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_08a1617e39a89dfb3d657c3c5cb6673b1.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_2dcd48aa9344cd20f26fc637ee88a87b.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_43a85650168eb762e1fb38ef04141702.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_b25fa393130cf385c37b5aed10543944.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_00_01T__arg6_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07T__arg1_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal_3_01T__return_07_08_4-members.html (no references)
+doc-install: Translating classsigc_1_1signal7-members.html (no references)
+doc-install: Translating classsigc_1_1signal6-members.html (no references)
+doc-install: Translating classsigc_1_1signal5-members.html (no references)
+doc-install: Translating classsigc_1_1signal4-members.html (no references)
+doc-install: Translating classsigc_1_1signal3-members.html (no references)
+doc-install: Translating classsigc_1_1signal2-members.html (no references)
+doc-install: Translating classsigc_1_1signal1-members.html (no references)
+doc-install: Translating classsigc_1_1signal0-members.html (no references)
+doc-install: Translating classsigc_1_1signal_1_1accumulated-members.html (no references)
+doc-install: Translating classsigc_1_1signal-members.html (no references)
+doc-install: Translating structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1retype__return__functor-members.html (no references)
+doc-install: Translating structsigc_1_1retype__functor-members.html (no references)
+doc-install: Translating structsigc_1_1reference__wrapper-members.html (no references)
+doc-install: Translating structsigc_1_1reference__wrapper.html (rewrote 3 of 3 references)
+doc-install: Translating classsigc_1_1pointer__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1pointer__functor0-members.html (no references)
+doc-install: Translating structsigc_1_1nil.html (no references)
+doc-install: Translating classsigc_1_1mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1limit__reference_3_01T__type_00_01true_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1limit__reference_3_01T__type_00_01true_01_4.html (no references)
+doc-install: Translating classsigc_1_1limit__reference-members.html (no references)
+doc-install: Translating classsigc_1_1limit__reference.html (no references)
+doc-install: Translating structsigc_1_1hide__functor_3-1_00_01T__functor_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1hide__functor_3_010_00_01T__functor_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1hide__functor.html (no references)
+doc-install: Translating structsigc_1_1functor__trait-members.html (no references)
+doc-install: Translating structsigc_1_1functor__trait.html (no references)
+doc-install: Translating structsigc_1_1exception__catch__functor_3_01T__functor_00_01T__catcher_00_01void_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1exception__catch__functor-members.html (no references)
+doc-install: Translating structsigc_1_1deduce__result__type-members.html (no references)
+doc-install: Translating structsigc_1_1deduce__result__type.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__limit__reference-members.html (no references)
+doc-install: Translating classsigc_1_1const__volatile__limit__reference.html (no references)
+doc-install: Translating structsigc_1_1const__reference__wrapper-members.html (no references)
+doc-install: Translating structsigc_1_1const__reference__wrapper.html (rewrote 3 of 3 references)
+doc-install: Translating classsigc_1_1const__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1const__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4.html (no references)
+doc-install: Translating classsigc_1_1const__limit__reference-members.html (no references)
+doc-install: Translating classsigc_1_1const__limit__reference.html (no references)
+doc-install: Translating structsigc_1_1connection-members.html (no references)
+doc-install: Translating structsigc_1_1connection.html (no references)
+doc-install: Translating structsigc_1_1compose2__functor-members.html (no references)
+doc-install: Translating structsigc_1_1compose1__functor-members.html (no references)
+doc-install: Translating classsigc_1_1can__deduce__result__type__with__decltype-members.html (no references)
+doc-install: Translating classsigc_1_1can__deduce__result__type__with__decltype.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1bound__volatile__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1bound__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__volatile__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor7-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor6-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor5-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor3-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor2-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor1-members.html (no references)
+doc-install: Translating classsigc_1_1bound__const__mem__functor0-members.html (no references)
+doc-install: Translating classsigc_1_1bound__argument_3_01std_1_1reference__wrapper_3_01T__wrapped_01_4_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__argument_3_01std_1_1reference__wrapper_3_01T__wrapped_01_4_01_4.html (rewrote 5 of 5 references)
+doc-install: Translating classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4.html (no references)
+doc-install: Translating classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4-members.html (no references)
+doc-install: Translating classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4.html (no references)
+doc-install: Translating classsigc_1_1bound__argument-members.html (no references)
+doc-install: Translating classsigc_1_1bound__argument.html (no references)
+doc-install: Translating structsigc_1_1bind__return__functor-members.html (no references)
+doc-install: Translating structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01ni4ca8293ad07c2413e0de8a15362ea6c4.html (no references)
+doc-install: Translating structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_0134a004909681b7eead4388b32fdece62.html (no references)
+doc-install: Translating structsigc_1_1bind__functor.html (no references)
+doc-install: Translating structsigc_1_1adapts-members.html (no references)
+doc-install: Translating structsigc_1_1adaptor__trait_3_01T__functor_00_01true_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1adaptor__trait_3_01T__functor_00_01true_01_4.html (no references)
+doc-install: Translating structsigc_1_1adaptor__trait_3_01T__functor_00_01false_01_4-members.html (no references)
+doc-install: Translating structsigc_1_1adaptor__trait_3_01T__functor_00_01false_01_4.html (no references)
+doc-install: Translating structsigc_1_1adaptor__trait.html (no references)
+doc-install: Translating structsigc_1_1adaptor__functor-members.html (no references)
+doc-install: Translating namespacesigc.html (rewrote 6 of 6 references)
+doc-install: Translating group__track__obj.html (no references)
+doc-install: Translating group__exception__catch.html (rewrote 4 of 4 references)
+doc-install: Translating group__compose.html (rewrote 6 of 6 references)
+doc-install: Translating group__retype.html (no references)
+doc-install: Translating group__hide.html (no references)
+doc-install: Translating group__bind.html (rewrote 5 of 5 references)
+doc-install: Translating group__adaptors.html (no references)
+doc-install: Translating group__mem__fun.html (no references)
+doc-install: Translating group__ptr__fun.html (no references)
+doc-install: Translating group__sigcfunctors.html (no references)
+doc-install: Translating group__slot.html (no references)
+doc-install: Translating group__signal.html (no references)
+doc-install: Translating deprecated.html (rewrote 10 of 10 references)
+doc-install: Translating since_2_8.html (no references)
+doc-install: Translating since_2_2_11.html (no references)
+doc-install: Translating since_2_4.html (no references)
+doc-install: Copying menudata.js
+doc-install: Copying menu.js
+doc-install: Copying jquery.js
+doc-install: Copying splitbar.png
+doc-install: Copying folderclosed.png
+doc-install: Copying folderopen.png
+doc-install: Copying doc.png
+doc-install: Copying inherit_graph_49.png
+doc-install: Copying inherit_graph_47.png
+doc-install: Copying inherit_graph_48.png
+doc-install: Copying inherit_graph_46.png
+doc-install: Copying inherit_graph_44.png
+doc-install: Copying inherit_graph_45.png
+doc-install: Copying inherit_graph_43.png
+doc-install: Copying inherit_graph_40.png
+doc-install: Copying inherit_graph_42.png
+doc-install: Copying inherit_graph_41.png
+doc-install: Copying inherit_graph_39.png
+doc-install: Copying inherit_graph_37.png
+doc-install: Copying inherit_graph_36.png
+doc-install: Copying inherit_graph_38.png
+doc-install: Copying inherit_graph_35.png
+doc-install: Copying inherit_graph_33.png
+doc-install: Copying inherit_graph_34.png
+doc-install: Copying inherit_graph_31.png
+doc-install: Copying inherit_graph_32.png
+doc-install: Copying inherit_graph_29.png
+doc-install: Copying inherit_graph_24.png
+doc-install: Copying inherit_graph_30.png
+doc-install: Copying inherit_graph_27.png
+doc-install: Copying inherit_graph_28.png
+doc-install: Copying inherit_graph_26.png
+doc-install: Copying inherit_graph_23.png
+doc-install: Copying inherit_graph_25.png
+doc-install: Copying inherit_graph_22.png
+doc-install: Copying inherit_graph_21.png
+doc-install: Copying inherit_graph_20.png
+doc-install: Copying inherit_graph_19.png
+doc-install: Copying inherit_graph_17.png
+doc-install: Copying inherit_graph_18.png
+doc-install: Copying inherit_graph_16.png
+doc-install: Copying inherit_graph_15.png
+doc-install: Copying inherit_graph_13.png
+doc-install: Copying inherit_graph_14.png
+doc-install: Copying inherit_graph_11.png
+doc-install: Copying inherit_graph_12.png
+doc-install: Copying inherit_graph_10.png
+doc-install: Copying inherit_graph_9.png
+doc-install: Copying inherit_graph_8.png
+doc-install: Copying inherit_graph_6.png
+doc-install: Copying inherit_graph_7.png
+doc-install: Copying inherit_graph_5.png
+doc-install: Copying inherit_graph_2.png
+doc-install: Copying inherit_graph_4.png
+doc-install: Copying inherit_graph_3.png
+doc-install: Copying inherit_graph_1.png
+doc-install: Copying inherit_graph_0.png
+doc-install: Copying graph_legend.png
+doc-install: Copying classsigc_1_1volatile__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1volatile__mem__functor0__inherit__graph.png
+doc-install: Copying structsigc_1_1trackable__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1track__obj__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg55fd8828cf1e28d31ca1331678509a180.png
+doc-install: Copying classsigc_1_1slot__base__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5aeb6f23fed93d951563913dc5fa02580.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_00_41a20cc46cbca7c5e1f6e6dab34f9c0b.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot7__inherit__graph.png
+doc-install: Copying classsigc_1_1slot5__inherit__graph.png
+doc-install: Copying classsigc_1_1slot6__inherit__graph.png
+doc-install: Copying classsigc_1_1slot4__inherit__graph.png
+doc-install: Copying classsigc_1_1slot3__inherit__graph.png
+doc-install: Copying classsigc_1_1slot2__inherit__graph.png
+doc-install: Copying classsigc_1_1slot1__inherit__graph.png
+doc-install: Copying structsigc_1_1signal__base__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar2a3f9cda8e57479189997c283e69f5ff.png
+doc-install: Copying classsigc_1_1slot__inherit__graph.png
+doc-install: Copying classsigc_1_1slot0__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar1da4c680404aa7c8c338bb136fd6dbea.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__ar821f8b15c79da4460a4c99304ac8d504.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0b160353f4ad061f559297e128c4d0646.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arbe5eef28da7cedf7c98aeec3dbe6d6b8.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01nil_0d3a462cf1a3aee09f94ea984d7d5fb39.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_011e4fe3321f9150dc130b7a3b2213423b.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_093dc18e43ee4275c7bebd699f7376cb7.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01T__arg3_00_01nil_00_01nil_00_014f61314713a22a7e37f830f31ddcbf93.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01T__arg2_00_01nil_00_01nil_00_01nil_00_01nil_dc4a103abb90b58689e91ed00e1a72ef.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil1ce68760f5323ed9c9884b19387edf66.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_00_01T__arg1_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_00_01nil_01_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_9258c1efa2d00a7da0d81978110ea314.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_ec3ac48ed12ed232a0dbee9db1100457.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_85d3e6b61106bb00a1c560939ede9003.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_dad4637e1583b021127592e90441ec81.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_cec71397b9bd9582728f0b963f11545d.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_00_01T__arg5_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07T__arg1_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07_08_4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal5__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal7__inherit__graph.png
+doc-install: Copying classsigc_1_1signal4__inherit__graph.png
+doc-install: Copying classsigc_1_1signal6__inherit__graph.png
+doc-install: Copying classsigc_1_1signal3__inherit__graph.png
+doc-install: Copying classsigc_1_1signal2__inherit__graph.png
+doc-install: Copying classsigc_1_1signal_1_1accumulated__inherit__graph.png
+doc-install: Copying classsigc_1_1signal1__inherit__graph.png
+doc-install: Copying classsigc_1_1signal0__inherit__graph.png
+doc-install: Copying structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4__inherit__graph.png
+doc-install: Copying structsigc_1_1retype__return__functor__inherit__graph.png
+doc-install: Copying structsigc_1_1retype__functor__inherit__graph.png
+doc-install: Copying classsigc_1_1signal__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1pointer__functor0__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1mem__functor0__inherit__graph.png
+doc-install: Copying structsigc_1_1hide__functor_3-1_00_01T__functor_01_4__inherit__graph.png
+doc-install: Copying structsigc_1_1hide__functor_3_010_00_01T__functor_01_4__inherit__graph.png
+doc-install: Copying structsigc_1_1functor__base__inherit__graph.png
+doc-install: Copying structsigc_1_1exception__catch__functor_3_01T__functor_00_01T__catcher_00_01void_01_4__inherit__graph.png
+doc-install: Copying structsigc_1_1exception__catch__functor__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor0__inherit__graph.png
+doc-install: Copying classsigc_1_1const__volatile__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor7__inherit__graph.png
+doc-install: Copying structsigc_1_1compose2__functor__inherit__graph.png
+doc-install: Copying classsigc_1_1const__mem__functor0__inherit__graph.png
+doc-install: Copying structsigc_1_1compose1__functor__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor0__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__volatile__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor0__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor2__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor7__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor3__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor1__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__volatile__mem__functor0__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor4__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor6__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor5__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor2__inherit__graph.png
+doc-install: Copying structsigc_1_1bind__return__functor__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor1__inherit__graph.png
+doc-install: Copying structsigc_1_1adaptor__base__inherit__graph.png
+doc-install: Copying classsigc_1_1bound__const__mem__functor0__inherit__graph.png
+doc-install: Copying structsigc_1_1adapts__inherit__graph.png
+doc-install: Copying structsigc_1_1bind__functor_3-1_00_01T__functor_00_01T__type1_00_01nil_00_01nil_00_01nil_00_01ni35f2e0963b773af799e2db178870d10d.png
+doc-install: Copying structsigc_1_1adaptor__functor__inherit__graph.png
+doc-install: Copying structsigc_1_1bind__functor_3_010_00_01T__functor_00_01T__bound_00_01nil_00_01nil_00_01nil_00_01f6384c348e419c00f69f976bc89ba7b1.png
+doc-install: Copying nav_g.png
+doc-install: Copying sync_off.png
+doc-install: Copying sync_on.png
+doc-install: Copying bdwn.png
+doc-install: Copying open.png
+doc-install: Copying closed.png
+doc-install: Copying doxygen.png
+doc-install: Copying bc_s.png
+doc-install: Copying nav_f.png
+doc-install: Copying nav_h.png
+doc-install: Copying tab_s.png
+doc-install: Copying tab_h.png
+doc-install: Copying tab_b.png
+doc-install: Copying tab_a.png
+/bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/devhelp/books/libsigc++-2.0'
+/usr/bin/perl -- "../docs/doc-install.pl" --verbose --mode=0644 --book-base='/usr/share/doc/libsigc++-2.0/reference/html' -t '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/devhelp/books/libsigc++-2.0' -- reference/libsigc++-2.0.devhelp2
+doc-install: Using base path /usr/share/doc/libsigc++-2.0/reference/html for Devhelp book
+doc-install: Translating libsigc++-2.0.devhelp2 (rewrote base path)
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/images'
+ /usr/bin/install -m 644 images/libsigc_logo.gif images/top.gif '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/images'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/tutorial/html'
+ /usr/bin/install -m 644 manual/html/ch01.html manual/html/ch02.html manual/html/ch02s02.html manual/html/ch02s03.html manual/html/ch02s04.html manual/html/ch03.html manual/html/ch03s02.html manual/html/ch04.html manual/html/ch04s02.html manual/html/ch05.html manual/html/index.html '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/tutorial/html'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0'
+ /usr/bin/install -m 644 index.html '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/reference'
+ /usr/bin/install -m 644 reference/libsigc++-2.0.tag '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/share/doc/libsigc++-2.0/reference'
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/docs'
+make[2]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[3]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /usr/bin/install -m 644 sigc++-2.0.pc '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /bin/mkdir -p '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/sigc++-2.0/include'
+ /usr/bin/install -m 644 sigc++config.h '/dev/shm/libsigcplusplus/libsigc++-2.0-dev/debian/tmp/usr/lib/x86_64-linux-gnu/sigc++-2.0/include'
+make[3]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[2]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   debian/rules override_dh_install
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+find debian/tmp -name '*.la' -print -delete
+debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.la
+dh_install
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_installdocs
+   dh_installchangelogs
+   debian/rules override_dh_installexamples
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+dh_installexamples -plibsigc++-2.0-doc examples/*.cc
+dh_installexamples --remaining-packages
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_lintian
+   dh_gnome
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   debian/rules override_dh_compress
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+dh_compress -X.tag
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_fixperms
+   debian/rules override_dh_missing
+make[1]: Entering directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+dh_missing --fail-missing
+make[1]: Leaving directory '/dev/shm/libsigcplusplus/libsigc++-2.0-dev'
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libsigc++-2.0-0v5/usr/lib/x86_64-linux-gnu/libsigc-2.0.so.0.0.0 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libsigc++-2.0-0v5/usr/lib/x86_64-linux-gnu/libsigc-2.0.so.0.0.0 was not linked against libpthread.so.0 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: package libsigc++-2.0-dev: substitution variable ${gnome:NextVersion} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-dev: substitution variable ${gnome:Version} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-doc: substitution variable ${gnome:NextVersion} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-doc: substitution variable ${gnome:Version} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-0v5: substitution variable ${gnome:NextVersion} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-0v5: substitution variable ${gnome:Version} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-0v5: substitution variable ${gnome:NextVersion} unused, but is defined
+dpkg-gencontrol: warning: package libsigc++-2.0-0v5: substitution variable ${gnome:Version} unused, but is defined
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'libsigc++-2.0-0v5' in '../libsigc++-2.0-0v5_2.10.1-1_amd64.deb'.
+dpkg-deb: building package 'libsigc++-2.0-0v5-dbgsym' in '../libsigc++-2.0-0v5-dbgsym_2.10.1-1_amd64.deb'.
+dpkg-deb: building package 'libsigc++-2.0-doc' in '../libsigc++-2.0-doc_2.10.1-1_all.deb'.
+dpkg-deb: building package 'libsigc++-2.0-dev' in '../libsigc++-2.0-dev_2.10.1-1_amd64.deb'.
+FAKEROOTKEY=958313960 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../libsigc++-2.0_2.10.1-1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-source: info: unapplying 0001-Comment-out-a-backwards-compatibility-typedef.patch
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian libsigc++-2.0_2.10.1-1_amd64.changes ...
+W: libsigc++-2.0-doc: privacy-breach-generic usr/share/doc/libsigc++-2.0-doc/index.html [<link href="http://library.gnome.org/devel/libsigc++/stable/doxygen.css" rel="stylesheet"\n type="text/css">] (http://library.gnome.org/devel/libsigc++/stable/doxygen.css)
+N: 1 tag overridden (1 warning)
+Finished running lintian.

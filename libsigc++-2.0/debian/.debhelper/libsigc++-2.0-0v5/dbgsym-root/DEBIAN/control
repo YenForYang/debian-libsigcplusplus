@@ -1,0 +1,13 @@
+Package: libsigc++-2.0-0v5-dbgsym
+Source: libsigc++-2.0
+Version: 2.10.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 73
+Depends: libsigc++-2.0-0v5 (= 2.10.1-1)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libsigc++-2.0-0v5
+Build-Ids: 866ce4c0f38274d696e8b35ada4bba2a53ad4956

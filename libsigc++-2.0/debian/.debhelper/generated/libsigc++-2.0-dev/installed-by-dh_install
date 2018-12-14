@@ -1,0 +1,5 @@
+debian/tmp/usr/include
+debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.a
+debian/tmp/usr/lib/x86_64-linux-gnu/libsigc-2.0.so
+debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig
+debian/tmp/usr/lib/x86_64-linux-gnu/sigc++-2.0

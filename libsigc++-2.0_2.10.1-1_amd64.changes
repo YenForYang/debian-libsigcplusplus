@@ -1,0 +1,43 @@
+Format: 1.8
+Date: Tue, 30 Oct 2018 23:15:31 -0400
+Source: libsigc++-2.0
+Binary: libsigc++-2.0-0v5 libsigc++-2.0-dev libsigc++-2.0-doc
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64 all
+Version: 2.10.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Changed-By: Jeremy Bicha <jbicha@debian.org>
+Description:
+ libsigc++-2.0-0v5 - type-safe Signal Framework for C++ - runtime
+ libsigc++-2.0-dev - type-safe Signal Framework for C++ - development files
+ libsigc++-2.0-doc - type-safe Signal Framework for C++ - reference documentation
+Changes:
+ libsigc++-2.0 (2.10.1-1) unstable; urgency=medium
+ .
+   * New upstream release
+   * Convert debian/copyright to 1.0 format
+   * Build-Depend on doxygen, graphviz & xsltproc to build docs from source
+   * Bump Standards-Version to 4.2.1
+   * Use dh_missing --fail-missing
+   * debian/libsigc++-2.0-0v5.symbols: Add Build-Depends-Package metadata
+   * Drop 0002-Fix-GCC-8-FTFBS.patch: Applied in new release
+Checksums-Sha1:
+ 0d079bcd9b72558992c928975725ffe4843f17b1 52564 libsigc++-2.0-0v5-dbgsym_2.10.1-1_amd64.deb
+ 4b172b7a8ebde051f32371c037c1853eb64cf675 65804 libsigc++-2.0-0v5_2.10.1-1_amd64.deb
+ 91691ac6cce534d7cf7492c7121a5c0a588e687e 750820 libsigc++-2.0-dev_2.10.1-1_amd64.deb
+ d5bcbb3d8c477812ad54e1c091a4c47f65376d79 4000104 libsigc++-2.0-doc_2.10.1-1_all.deb
+ 38326726a04da50229183e3843dcaa3bd8d466cf 7585 libsigc++-2.0_2.10.1-1_amd64.buildinfo
+Checksums-Sha256:
+ 4d101e70374156c5d8b7cf4e8f7eba62f35afc2a945a8e7a14a621726ada590f 52564 libsigc++-2.0-0v5-dbgsym_2.10.1-1_amd64.deb
+ 9299fcc733923206653aff5ab60d7951bf480d41ac397cb1463d82db67a7ccbd 65804 libsigc++-2.0-0v5_2.10.1-1_amd64.deb
+ d50db1166972692f40b283d53a87ff8cf6c2bf98d57464c650c006c702acc6df 750820 libsigc++-2.0-dev_2.10.1-1_amd64.deb
+ 092b8cb17a6c8baf9ebe621508c265e10b6909b2b68e927cbd13cfeaf1aed083 4000104 libsigc++-2.0-doc_2.10.1-1_all.deb
+ 97306e1aea4adb285ec3ef6ae7eb6c34f1302f76517f9025c5117a45749676eb 7585 libsigc++-2.0_2.10.1-1_amd64.buildinfo
+Files:
+ 5866d4ad47ee21e25b6bc52fdf89a431 52564 debug optional libsigc++-2.0-0v5-dbgsym_2.10.1-1_amd64.deb
+ 319418ef6a24a8e53ba65bd75aa085f8 65804 libs optional libsigc++-2.0-0v5_2.10.1-1_amd64.deb
+ 5a79cb2be7de574c85a3036112d06a91 750820 libdevel optional libsigc++-2.0-dev_2.10.1-1_amd64.deb
+ f28c4bfe9f8d9d78c95a992dcec2fdd2 4000104 doc optional libsigc++-2.0-doc_2.10.1-1_all.deb
+ 5b681aaa67dd2b4cfe7c4c301fe6857b 7585 devel optional libsigc++-2.0_2.10.1-1_amd64.buildinfo
